@@ -11,6 +11,7 @@ class Player {
 const player1 = new Player(34, false);
 player1.aboutInfo();
 
+
 // This is highter, lower game
 
 function checkGuess(computerGuess, guess) {
@@ -24,13 +25,25 @@ function checkGuess(computerGuess, guess) {
     }
 }
 
+function numberGuessingGame() {
 console.log("Enter a number between 1 and 10.");
 let computerGuess = Math.floor(Math.random() * 10) + 1;
 
-while (true) {
-    let guess = prompt();
-    // console.log(guess);
-    // console.log(computerGuess);
-    checkGuess(computerGuess, guess);
+    while (true) {
+        let guess = prompt();
+        // console.log(guess);
+        // console.log(computerGuess);
+        checkGuess(computerGuess, guess);
+    }
+}
+// numberGuessingGame();
 
+
+// Button and input box test
+
+const input = document.getElementById("input");
+
+function submit() {
+    console.log("You submited!");
+    input.value = "Submitted";
 }
