@@ -44,6 +44,31 @@ let computerGuess = Math.floor(Math.random() * 10) + 1;
 const input = document.getElementById("input");
 
 function submit() {
-    console.log("You submited!");
-    input.value = "Submitted";
+    var eulaBox = document.getElementById("EULA");
+
+    if (eulaBox.checked == true) {
+        console.log("You submited");
+    } else {
+        console.log("You have not submited");
+    }
+}
+
+function printToConsole() {
+    console.log("The text box has", input.value);
+}
+
+
+
+function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("myCheck");
+  // Get the output text
+  var text = document.getElementById("text");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
 }
